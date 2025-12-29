@@ -41,6 +41,7 @@ public class MyGdxGame extends Game {
 
     float accumulator = 0;
 
+
     @Override
     public void create() {
 

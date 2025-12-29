@@ -3,7 +3,7 @@ package com.mygdx.game.sprint3;
 public class GameResources {
     public static final String SHIP_IMG_PATH = "textures/tank.png";
     public static final String BACKGROUND_IMG_PATH = "textures/way1.png";
-    public static final String TRASH_IMG_PATH = "textures/paint_plain.png";
+    public static final String PLAIN_IMG_PATH = "textures/paint_plain.png";
 
     public static final String BULLET_IMG_PATH = "textures/bullet.png";
     public static final String BLACKOUT_TOP_IMG_PATH = "textures/blackout_top.png";

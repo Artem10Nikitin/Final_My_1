@@ -24,7 +24,7 @@ public class GameSession {
         score = 0;
         destructedTrashNumber = 0;
         sessionStartTime = TimeUtils.millis();
-        nextTrashSpawnTime = sessionStartTime + (long) (GameSettings.STARTING_TRASH_APPEARANCE_COOL_DOWN
+        nextTrashSpawnTime = sessionStartTime + (long) (GameSettings.STARTING_PLAIN_APPEARANCE_COOL_DOWN
                 * getTrashPeriodCoolDown());
     }
 
@@ -68,7 +68,7 @@ public class GameSession {
 
     public boolean shouldSpawnTrash() {
         if (nextTrashSpawnTime <= TimeUtils.millis()) {
-            nextTrashSpawnTime = TimeUtils.millis() + (long) (GameSettings.STARTING_TRASH_APPEARANCE_COOL_DOWN
+            nextTrashSpawnTime = TimeUtils.millis() + (long) (GameSettings.STARTING_PLAIN_APPEARANCE_COOL_DOWN
                     * getTrashPeriodCoolDown());
             return true;
         }

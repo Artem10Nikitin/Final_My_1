@@ -23,7 +23,7 @@ import com.mygdx.game.sprint3.managers.MemoryManager;
 import com.mygdx.game.sprint3.objects.BulletObject;
 
 import com.mygdx.game.sprint3.objects.ShipObject;
-import com.mygdx.game.sprint3.objects.TrashObject;
+import com.mygdx.game.sprint3.objects.PlainObject;
 
 import java.util.ArrayList;
 
@@ -32,9 +32,9 @@ public class GameScreen extends ScreenAdapter {
     MyGdxGame myGdxGame;
     GameSession gameSession;
     ShipObject shipObject;
-    TrashObject trashObject;
+    PlainObject plainObject;
 
-    ArrayList<TrashObject> trashArray;
+    ArrayList<PlainObject> trashArray;
     ArrayList<BulletObject> bulletArray;
 
     ContactManager contactManager;
@@ -129,12 +129,12 @@ public class GameScreen extends ScreenAdapter {
 
         if (gameSession.state == GameState.PLAYING) {
             if (gameSession.shouldSpawnTrash()) {
-                TrashObject trashObject = new TrashObject(
-                        GameSettings.TRASH_WIDTH, GameSettings.TRASH_HEIGHT,
-                        GameResources.TRASH_IMG_PATH,
+                PlainObject plainObject = new PlainObject(
+                        GameSettings.PLAIN_WIDTH, GameSettings.PLAIN_HEIGHT,
+                        GameResources.PLAIN_IMG_PATH,
                         myGdxGame.world
                 );
-                trashArray.add(trashObject);
+                trashArray.add(plainObject);
             }
 
             if (shipObject.needToShoot()) {
@@ -210,7 +210,7 @@ public class GameScreen extends ScreenAdapter {
 
         myGdxGame.batch.begin();
         backgroundView.draw(myGdxGame.batch);
-        for (TrashObject trash : trashArray) trash.draw(myGdxGame.batch);
+        for (PlainObject trash : trashArray) trash.draw(myGdxGame.batch);
         shipObject.draw(myGdxGame.batch);
         for (BulletObject bullet : bulletArray) bullet.draw(myGdxGame.batch);
         topBlackoutView.draw(myGdxGame.batch);

@@ -1,5 +1,7 @@
 package com.mygdx.game.sprint3.screens;
 
+import static com.mygdx.game.sprint3.GameResources.SHIP_IMG_PATH;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.Vector3;
@@ -16,6 +18,7 @@ public class MenuScreen extends ScreenAdapter {
 
     MovingBackgroundView backgroundView;
     TextView titleView;
+
     ButtonView startButtonView;
     ButtonView settingsButtonView;
     ButtonView exitButtonView;
@@ -25,7 +28,8 @@ public class MenuScreen extends ScreenAdapter {
         this.myGdxGame = myGdxGame;
 
         backgroundView = new MovingBackgroundView(GameResources.BACKGROUND_IMG_PATH);
-        titleView = new TextView(myGdxGame.largeWhiteFont, 180, 960, "Space Cleaner");
+        titleView = new TextView(myGdxGame.largeWhiteFont, 180, 860, "Road Cleaner");
+
         startButtonView = new ButtonView(140, 646, 440, 70, myGdxGame.commonBlackFont, GameResources.BUTTON_LONG_BG_IMG_PATH, "start");
         settingsButtonView = new ButtonView(140, 551, 440, 70, myGdxGame.commonBlackFont, GameResources.BUTTON_LONG_BG_IMG_PATH, "settings");
         recordsButtonView = new ButtonView(140, 456, 440, 70, myGdxGame.commonBlackFont, GameResources.BUTTON_LONG_BG_IMG_PATH, "records");
